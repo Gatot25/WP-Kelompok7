@@ -155,12 +155,12 @@
         <div class="col-md-4 col-sm-6">
           <div class="blog-post">
             <div class="blog-thumb">
-              <img src="<?= base_url('assets/assets_shop') ?>/images/offer-1-720x480.jpg" alt="">
+              <img src="<?= base_url('assets/assets_shop') ?>/images/offer-1-720x480.png" alt="">
             </div>
             <div class="down-content">
               <a href="offers.html"><h4>Jaminan Keamanan Transaksi</h4></a>
               <p>Jaminan transaksi aman secara online
-                Transaksi Aman di Nemob dengan teknologi SSL dari Geotrust yang memastikan semua informasi. Aman dalam setiap transaksi.</p>
+                Transaksi Aman dengan teknologi SSL dari Geotrust yang memastikan semua informasi. Aman dalam setiap transaksi.</p>
               <div class="post-options">
                 <div class="row">
                   <div class="col-lg-12">
@@ -177,12 +177,12 @@
         <div class="col-md-4 col-sm-6">
           <div class="blog-post">
             <div class="blog-thumb">
-              <img src="<?= base_url('assets/assets_shop') ?>/images/offer-2-720x480.jpg" alt="">
+              <img src="<?= base_url('assets/assets_shop') ?>/images/offer-2-720x480.png" alt="">
             </div>
             <div class="down-content">
               <a href="offers.html"><h4>Pelayanan</h4></a>
               <p>24/7
-                Pelayanan pelanggan Tim Nemob siap membantu Anda 24/7 dan juga dalam keadaan darurat. Nemob selalu siap membantu kamu!.</p>
+                Pelayanan pelanggan Tim Nemob siap membantu Anda 24/7 dan juga dalam keadaan darurat. Kami selalu siap membantu kamu!.</p>
               <div class="post-options">
                 <div class="row">
                   <div class="col-lg-12">
@@ -199,11 +199,11 @@
         <div class="col-md-4 col-sm-6">
           <div class="blog-post">
             <div class="blog-thumb">
-              <img src="<?= base_url('assets/assets_shop') ?>/images/offer-3-720x480.jpg" alt="">
+              <img src="<?= base_url('assets/assets_shop') ?>/images/offer-3-720x480.png" alt="">
             </div>
             <div class="down-content">
               <a href="offers.html"><h4>Pencarian</h4></a>
-              <p>Hasil pencarian yang paling komprehensif
+              <p>Hasil pencarian yang paling komprehensif.
                 Cari dan bandingkan berbagai jenis mobil dengan harga lebih murah.</p>
               <div class="post-options">
                 <div class="row">
