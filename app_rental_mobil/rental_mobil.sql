@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 30, 2021 at 04:14 AM
--- Server version: 10.1.37-MariaDB
--- PHP Version: 7.1.24
+-- Generation Time: Nov 18, 2021 at 12:03 PM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 7.3.31
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -58,12 +57,8 @@ CREATE TABLE `customer` (
 --
 
 INSERT INTO `customer` (`id_customer`, `nama`, `username`, `alamat`, `gender`, `no_telepon`, `no_ktp`, `password`, `role_id`) VALUES
-(4, 'Joko Santoso', 'joko', 'Jl. Satu Pekanbaru', 'laki-laki', '0653246512', '215654532767', '81dc9bdb52d04dc20036dbd8313ed055', 2),
-(5, 'Darmawan', 'darmawan', 'Jl. Dua Pekanbaru', 'laki-laki', '07617623', '1423477324723', '81dc9bdb52d04dc20036dbd8313ed055', 2),
-(6, 'Andi', 'andi', 'Jakarta', 'laki-laki', '0217687634', '12747657463', '827ccb0eea8a706c4c34a16891f84e7b', 2),
-(7, 'Arif', 'admin', 'Pekanbaru', 'laki-laki', '065423624', '1764578345', '21232f297a57a5a743894a0e4a801fc3', 1),
-(8, 'Bayu', 'bayu', 'Jl. Nangka Pekanbaru', 'laki-laki', '07612233', '14000756764735', '81dc9bdb52d04dc20036dbd8313ed055', 2),
-(9, 'Toni', 'toni', 'Bandung', 'laki-laki', '0835653243', '1753453265435', '81dc9bdb52d04dc20036dbd8313ed055', 2);
+(1, 'Admin', 'Admin', 'Tangerang', 'laki-laki', '065423624', '1764578345', '21232f297a57a5a743894a0e4a801fc3', 1),
+(10, 'Gatot', 'gatot', 'Tangerang Selatan', 'laki-laki', '08123234942', '12843124485', 'bb474dec2b2526c82e22c987722bbd7e', 2);
 
 -- --------------------------------------------------------
 
@@ -93,11 +88,12 @@ CREATE TABLE `mobil` (
 --
 
 INSERT INTO `mobil` (`id_mobil`, `kode_tipe`, `merek`, `no_plat`, `warna`, `tahun`, `status`, `harga`, `denda`, `ac`, `sopir`, `mp3_player`, `central_lock`, `gambar`) VALUES
-(6, 'SDN', 'Toyota Camry', 'B 1446 DAG', 'Hitam', '2015', '1', 400000, 30000, 1, 0, 1, 0, 'toyota-camry.jpg'),
-(9, 'SDN', 'Honda City', 'B 1456 DAG', 'Hitam', '2015', '0', 450000, 30000, 1, 0, 1, 0, 'honda-city.jpg'),
-(10, 'SDN', 'CRV', 'B 1234 csh', 'Silver', '2019', '0', 400000, 100000, 0, 0, 1, 1, 'gallery_used-car-mobil123-honda-cr-v-2_4.jpg'),
-(13, 'MNV', 'Toyota Avanza', 'B 2245 DAM', 'Hitam', '2015', '1', 350000, 25000, 1, 0, 0, 1, 'avanza-hitam.jpg'),
-(14, 'MNV', 'Toyota Avanza', 'B 1123 DUD', 'Putih', '2016', '1', 350000, 25000, 1, 0, 1, 1, 'avanza-putih.jpg');
+(6, 'SDN', 'DAIHATSU AYLA', 'B 1446 DAG', 'Merah', '2019', '1', 400000, 50000, 1, 0, 1, 0, 'Daihatsu-ayla1.jpg'),
+(9, 'SDN', 'DAIHATSU SIGRA', 'B 1156 EAG', 'Coklat Metal', '2021', '0', 450000, 70000, 1, 0, 1, 1, 'Daihatsu-siegra1.jpeg'),
+(10, 'SDN', 'HONDA JAZZ', 'B 1234 LOR', 'Biru', '2019', '0', 400000, 100000, 1, 0, 1, 1, 'Honda-jazz1.jpg'),
+(13, 'SDN', 'TOYOTA AGYA', 'B 2245 DAM', 'Silver', '2019', '0', 480000, 50000, 1, 0, 1, 0, 'Toyota-agya1.jpg'),
+(14, 'SDN', 'HONDA BRIO', 'B 1123 DUD', 'Kuning', '2020', '1', 450000, 40000, 1, 1, 1, 1, 'Honda-brio1.jpg'),
+(15, 'SDN', 'DAIHATSU XENIA', 'B 5332 AJY', 'Putih', '2020', '0', 400000, 30000, 1, 1, 1, 0, 'Daihatsu-xenia1.jpeg');
 
 -- --------------------------------------------------------
 
@@ -169,7 +165,8 @@ INSERT INTO `transaksi` (`id_rental`, `id_customer`, `id_mobil`, `tgl_rental`, `
 (4, 6, 6, '2021-01-15', '2021-01-18', '400000', 30000, '60000', '2021-01-20', 'Kembali', 'Selesai', 'tugas.png', 1),
 (5, 8, 10, '2021-01-18', '2021-01-19', '400000', 100000, '100000', '2021-01-20', 'Belum Kembali', 'Belum Selesai', '', 0),
 (6, 6, 11, '2021-01-28', '2021-01-30', '300000', 25000, '25000', '2021-01-31', 'Kembali', 'Selesai', 'tugas2.png', 1),
-(7, 9, 13, '2021-01-30', '2021-02-01', '350000', 25000, '25000', '2021-02-02', 'Kembali', 'Selesai', 'tugas2.png', 1);
+(7, 9, 13, '2021-01-30', '2021-02-01', '350000', 25000, '25000', '2021-02-02', 'Kembali', 'Selesai', 'tugas2.png', 1),
+(8, 10, 13, '2021-11-18', '2021-11-19', '480000', 50000, '0', '0000-00-00', 'Belum Kembali', 'Belum Selesai', '', 0);
 
 --
 -- Indexes for dumped tables
@@ -225,13 +222,13 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `id_customer` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_customer` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `mobil`
 --
 ALTER TABLE `mobil`
-  MODIFY `id_mobil` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id_mobil` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `rental`
@@ -249,7 +246,7 @@ ALTER TABLE `tipe`
 -- AUTO_INCREMENT for table `transaksi`
 --
 ALTER TABLE `transaksi`
-  MODIFY `id_rental` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_rental` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
